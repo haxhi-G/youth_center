@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navBar">
+    <div class="logo"><img src="assets/images/logo.png.png" alt="Logo" width="80px">
+    </div>
+    <ul class="navLinks">
+        <li class="menu-toggle" (click)="toggleMenu()">Home</li>
+        <div class="menu" [class.open]="isMenuOpen">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <li class="menu-toggle" (click)="toggleMenu()">Zëri Rinor</li>
+        <div class="menu" [class.open]="isMenuOpen">
+            <ul>
+              <li><a href="" routerLink="/zeririnor" routerLinkActive="router-link-active" >Home</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <li class="menu-toggle" (click)="toggleMenu()">Bëhu pjesë</li>
+          <!-- <div class="menu" [class.open]="isMenuOpen">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div> -->
+        <li><a href="#">Projektet</a></li>
+        <li><a href="#">Publikimet</a></li>
+    </ul>
+    <div class="buttonDonate"><a href="" style="    padding-right: 50px;">
+      <button>Donate</button></a>
+    </div>
+</nav>
+</body>
+</html>

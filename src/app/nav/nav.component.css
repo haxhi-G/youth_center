@@ -1,0 +1,145 @@
+
+.background {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+  }
+  
+
+.buttonDonate a button {
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.logo{
+    padding-left: 50px;
+}
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f4f4;
+    padding: 10px 20px;
+}
+
+.navBar .logo a {
+    color: rgb(106, 49, 49);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+}
+
+.navLinks li {
+    margin: 0 15px;
+    padding-right: 50px;
+}
+
+.navLinks a {
+    color: rgb(8, 5, 5);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navLinks a:hover {
+    color: #f39c12;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navLinks.active {
+        display: block;
+    }
+
+    .navLinks li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+}
+.menu-toggle {
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none; /* Hidden by default */
+  background-color: #f6f4f4;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.menu1 {
+  display: none; /* Hidden by default */
+  background-color: #f6f4f4;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.menu2 {
+  display: none; /* Hidden by default */
+  background-color: #f6f4f4;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.menu.open {
+  display: block;
+  animation: slideDown 0.5s ease-in-out;
+}
+
+
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+  text-align: left;
+}
+
+.menu a {
+  color: rgb(197, 169, 169);
+  text-decoration: none;
+  display: block;
+}
+
+
+/* Slide-down animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.menu a:hover {
+  background-color: #9b8484;
+}
