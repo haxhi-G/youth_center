@@ -7,39 +7,49 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navBar">
-    <div class="logo"><img src="assets/images/logo.png.png" alt="Logo" width="80px">
+<nav class="nav-bar">
+  <div class="logo">
+    <img src="assets/images/logo.png.png" alt="Logo" width="80px">
+  </div>
+  <div></div>
+  <div class="drop-down" data-dropdown>
+    <button class="link" data-dropdown-button>Home</button>
+    <div class="drop-down-menu">
+      <a href="#">tregimi yn</a><br>
+      <a href="#">kontakot ne</a>
     </div>
-    <ul class="navLinks">
-        <li class="menu-toggle" (click)="toggleMenu()">Home</li>
-        <div class="menu" [class.open]="isMenuOpen">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-        <li class="menu-toggle" (click)="toggleMenu()">Zëri Rinor</li>
-        <div class="menu" [class.open]="isMenuOpen">
-            <ul>
-              <li><a href="" routerLink="/zeririnor" routerLinkActive="router-link-active" >Home</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          <li class="menu-toggle" (click)="toggleMenu()">Bëhu pjesë</li>
-          <!-- <div class="menu" [class.open]="isMenuOpen">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div> -->
-        <li><a href="#">Projektet</a></li>
-        <li><a href="#">Publikimet</a></li>
-    </ul>
-    <div class="buttonDonate"><a href="" style="    padding-right: 50px;">
-      <button>Donate</button></a>
+  </div>
+  <div class="drop-down" data-dropdown>
+    <button class="link" data-dropdown-button>Zeri rinor</button>
+    <div class="drop-down-menu">
+      <a href="#">Blog</a><br>
+      <a href="#">Keshilla per rini</a><br>
+      <a href="#">Shkrime nga rinia</a>
     </div>
+  </div>
+  <div class="drop-down" data-dropdown>
+    <button class="link" data-dropdown-button>Behu pjes</button>
+    <div class="drop-down-menu">
+      <a href="#">Alumni</a>
+
+    </div>
+  </div>
+  <div class="drop-down" data-dropdown>
+    <button class="link" data-dropdown-button>Publikimet</button>
+    <div class="drop-down-menu">
+      <a href="#">Letra te hapura</a><br>
+      <a href="#">Hulumtime</a><br>
+      <a href="#">Raportet vjetore</a>
+    </div>
+  </div>
+  <div></div>
+
+  <div class="button-donate">
+    <a href="#" style="padding-right: 50px;">
+      <button>Donate</button>
+    </a>
+  </div>
 </nav>
 </body>
 </html>
+

@@ -9,17 +9,43 @@ import { ZeririnorComponent } from '../zeririnor/zeririnor.component';
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
-  isMenuOpen: boolean = false;
+
+
   title = 'nav'
 
-  constructor(private cdr: ChangeDetectorRef) {}
-
-  toggleMenu(): void {
-    this.isMenuOpen = !this.isMenuOpen;
-    console.log('Menu state:', this.isMenuOpen);
-    this.cdr.detectChanges();
-  
   }
-  
-}
+// document.addEventListener("click", e => {
+//   const isDropdownButton = e.target.matches("[data-dropdown-button]")
+//   if (!isDropdownButton && e.target.closest("[data-dropdown]") !== null) return
+//
+//   let currentDropdown
+//   if (isDropdownButton){
+//     currentDropdown = e.target.closest('[data-dropdown]');
+//     currentDropdown.classList.toggle("active");
+//   }
+//   document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
+//     if (dropdown === currentDropdown) return
+//     dropdown.classList.remove("active");
+//   });
+// })
+//
+document.addEventListener("click", (e: MouseEvent) => {
+  const target = e.target as HTMLElement;
+  const isDropdownButton = target.matches("[data-dropdown-button]");
+
+  if (!isDropdownButton && target.closest("[data-dropdown]") !== null) return;
+
+  let currentDropdown: HTMLElement | null = null;
+
+  if (isDropdownButton) {
+    currentDropdown = target.closest("[data-dropdown]");
+    currentDropdown?.classList.toggle("active");
+  }
+
+  document.querySelectorAll<HTMLElement>("[data-dropdown].active").forEach(dropdown => {
+    if (dropdown === currentDropdown) return;
+    dropdown.classList.remove("active");
+  });
+});
+
 
