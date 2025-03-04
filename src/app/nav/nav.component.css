@@ -4,6 +4,9 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+pre{
+  font-family: Arial, sans-serif;
+}
 
 .nav-bar {
   display: flex;
@@ -31,19 +34,23 @@ body {
 }
 
 .drop-down-menu {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   top: 30px;
   left: 0;
-  background-color: white;
-  color: black;
-  padding: 5px;
+  background-color: black;
+  padding: 20px;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
+  transform: translateY(-10px);
 }
 
 .drop-down.active .drop-down-menu {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .button-donate button {
@@ -53,4 +60,10 @@ body {
   border-radius: 5px;
   color: white;
   cursor: pointer;
+}
+
+.drop-down-menu a {
+  display: block;
+  text-decoration: none;
+  color: white;
 }
